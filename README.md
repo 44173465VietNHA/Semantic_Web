@@ -1,2 +1,2 @@
-# Sematic_Web
+# Semantic_Web
 Project SOICT-HUST
