@@ -13,12 +13,13 @@ class FirstSpider(scrapy.Spider):
    yield scrapy.Request(link.replace('..', 'https://www.maxreading.com'), callback=self.saveFile)
  def saveFile(self, response):
   name = response.xpath('//*[@id="content"]/div/div[1]/div/h3/text()').extract()
-  content = response.xpath('string(//*[@id="chapter"]/div)').extract()
+  content = response.xpath('//*[@id="chapter"]/..//text()').extract()
   strName = ''.join(name)
-  strContent = '|'.join(content)
-  nameFile = strName.lstrip()+'.txt'
-  text = strContent.replace('\n','').replace('|','').encode('utf-8')
-  link = response.url.encode("utf-8")
+  nameFile = strName.strip()+'.txt'
+  allContent = ''
+  for text in content:
+   allContent = allContent + ''.join(text).strip()
+  allContent = allContent.strip().encode('utf-8')
   f = open('scenicSpots/'+nameFile,'wb')
-  f.write(text)
+  f.write(allContent)
   f.close()
