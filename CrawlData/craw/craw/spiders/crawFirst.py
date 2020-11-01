@@ -13,7 +13,7 @@ class FirstSpider(scrapy.Spider):
    yield scrapy.Request(link.replace('..', 'https://www.maxreading.com'), callback=self.saveFile)
  def saveFile(self, response):
   name = response.xpath('//*[@id="content"]/div/div[1]/div/h3/text()').extract()
-  content = response.xpath('//*[@id="chapter"]/..//text()').extract()
+  content = response.xpath('//*[@id="chapter"]/.//text()').extract()
   strName = ''.join(name)
   nameFile = strName.strip()+'.txt'
   allContent = ''
