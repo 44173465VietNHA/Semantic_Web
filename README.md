@@ -4,9 +4,7 @@ https://docs.google.com/spreadsheets/d/1iMIy8_Q99Kr9eq3gWwNOlWxGG87OXFrM-d26n-kw
 ## Tham khảo:
 https://github.com/kieuthuong/createDataforFesivalOntology
 ## Chủ đề:
-Du lịch
-## Plan:
-https://docs.google.com/spreadsheets/d/1vUnjes4tS91-8aYXgPc812EM2dPzkY9b0uEWkChuN1A/edit#gid=0
+Di tích lịch sử
 ## Bài tập các tuần:
 * 4 tuần đầu:
   1. Thành lập nhóm, ghi lại số nhóm vào danh sách
