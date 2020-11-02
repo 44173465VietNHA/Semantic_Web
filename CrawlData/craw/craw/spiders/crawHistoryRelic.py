@@ -1,6 +1,8 @@
 import scrapy
 from craw.items import CrawItem
 
+# run in sematic_web/CrawlData/craw
+
 crawHistory = "crawHistory"
 historyUrl = "http://thegioidisan.vn/vi/c-di-tich-lich-su-van-hoa"
 
