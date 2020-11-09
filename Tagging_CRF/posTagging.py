@@ -13,6 +13,9 @@ def sent2postagging(sent):
   result = result + sent[0][i] + " " + sent[1][i] + "\n"
  return result
 
+# example = 'TRƯỜNG LÀ ĐẠI HỌC TOP ĐẦU CỦA CẢ NƯỚC, được nhiều trường đại học quốc tế công nhận chương trình đào tạo và thiết lập quan hệ đào tạo, trong đó có Đại học'
+# print(sent2postagging(example))
+
 path = ""
 
 for filename in os.listdir(dir):
