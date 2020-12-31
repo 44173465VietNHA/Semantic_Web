@@ -14,7 +14,8 @@ class historySpider2(scrapy.Spider):
   for page in range(1,endPage):
    yield self.make_requests_from_url(historyUrl+'?start=%s' %page)
  def parse(self, response):
-  historyUrl = response.xpath('//*[@id="content"]/div[3]/div[2]/div/div/div/h2/a/@href').extract()
+  historyUrl = response.xpath('//*[@class="span12"]/div/div/h2/a/@href').extract()
+  print("length"+str(len(historyUrl)))
   for link in historyUrl:
    yield scrapy.Request('https://dulichvinhphuc.gov.vn'+link, callback=self.saveFile)
  def saveFile(self, response):
